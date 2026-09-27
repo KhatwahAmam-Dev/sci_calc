@@ -8,8 +8,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Orbitron & Rajdhani -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome CDN untuk icon -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Font Awesome CDN untuk Icon Footer -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <style>
         body {
             font-family: 'Rajdhani', sans-serif;
@@ -60,137 +61,111 @@
         .cyber-btn-action:hover {
             box-shadow: 0 0 18px rgba(0, 240, 255, 0.7);
         }
-        /* Container Utama Footer - Diset Vertikal (Top to Bottom) */
-.social-footer-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 30px 15px;
-  gap: 16px;
-  background: transparent;
-  width: 100%;
-}
 
-/* Floating Bar Icon (Horisontal / Tiduran) */
-.social-footer-bar {
-  display: flex;
-  flex-direction: row; /* Berjejer ke samping */
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px);
-  padding: 8px 16px;
-  border-radius: 50px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-}
+        /* --- STYLING FOOTER TEMA CYBER --- */
+        .social-footer-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px 15px 12px;
+            gap: 14px;
+            background: transparent;
+            width: 100%;
+        }
 
-/* Styling Ukuran Icon yang Lebih Ringkas & Elegan */
-.social-icon {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  color: #555;
-  background: #f0f2f5;
-  text-decoration: none;
-  font-size: 16px;
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
+        .social-footer-bar {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(10px);
+            padding: 8px 16px;
+            border-radius: 50px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(0, 240, 255, 0.25);
+        }
 
-/* Efek Hover / Membal saat disentuh kursor */
-.social-icon:hover {
-  transform: translateY(-4px) scale(1.12);
-  color: #fff;
-}
+        .social-icon {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            color: #94a3b8;
+            background: rgba(30, 41, 59, 0.9);
+            text-decoration: none;
+            font-size: 15px;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
 
-/* Warna Masing-masing Brand & Efek Glowing */
-.social-icon.linkedin:hover {
-  background: #0077b5;
-  box-shadow: 0 5px 12px rgba(0, 119, 181, 0.4);
-}
+        .social-icon:hover {
+            transform: translateY(-4px) scale(1.12);
+            color: #fff;
+        }
 
-.social-icon.facebook:hover {
-  background: #1877f2;
-  box-shadow: 0 5px 12px rgba(24, 119, 242, 0.4);
-}
+        .social-icon.linkedin:hover { background: #0077b5; box-shadow: 0 0 12px rgba(0, 119, 181, 0.6); }
+        .social-icon.facebook:hover { background: #1877f2; box-shadow: 0 0 12px rgba(24, 119, 242, 0.6); }
+        .social-icon.instagram:hover { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); box-shadow: 0 0 12px rgba(220, 39, 67, 0.6); }
+        .social-icon.whatsapp:hover { background: #25d366; box-shadow: 0 0 12px rgba(37, 211, 102, 0.6); }
+        .social-icon.shopee:hover { background: #ee4d2d; box-shadow: 0 0 12px rgba(238, 77, 45, 0.6); }
+        .social-icon.tiktok:hover { background: #000000; box-shadow: 0 0 12px rgba(255, 255, 255, 0.4); }
 
-.social-icon.instagram:hover {
-  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-  box-shadow: 0 5px 12px rgba(220, 39, 67, 0.4);
-}
+        .social-icon .tooltip {
+            position: absolute;
+            top: -36px;
+            background: #00f0ff;
+            color: #090d16;
+            font-weight: 700;
+            font-size: 10px;
+            padding: 3px 7px;
+            border-radius: 4px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: all 0.25s ease;
+            font-family: 'Rajdhani', sans-serif;
+        }
 
-.social-icon.whatsapp:hover {
-  background: #25d366;
-  box-shadow: 0 5px 12px rgba(37, 211, 102, 0.4);
-}
+        .social-icon .tooltip::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 4px 4px 0;
+            border-style: solid;
+            border-color: #00f0ff transparent;
+        }
 
-.social-icon.shopee:hover {
-  background: #ee4d2d;
-  box-shadow: 0 5px 12px rgba(238, 77, 45, 0.4);
-}
+        .social-icon:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
+            top: -38px;
+        }
 
-.social-icon.tiktok:hover {
-  background: #000000;
-  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4);
-}
+        .footer-credits {
+            font-size: 13px;
+            color: #94a3b8;
+            text-align: center;
+            line-height: 1.5;
+        }
 
-/* Tooltip saat Hover */
-.social-icon .tooltip {
-  position: absolute;
-  top: -36px;
-  background: #222;
-  color: #fff;
-  font-size: 11px;
-  padding: 4px 8px;
-  border-radius: 6px;
-  white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: all 0.25s ease;
-  font-family: sans-serif;
-}
-
-.social-icon .tooltip::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-width: 4px 4px 0;
-  border-style: solid;
-  border-color: #222 transparent;
-}
-
-.social-icon:hover .tooltip {
-  opacity: 1;
-  visibility: visible;
-  top: -40px;
-}
-
-/* Styling Teks Credit Bagian Bawah */
-.footer-credits {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 13px;
-  color: #666;
-  text-align: center;
-  line-height: 1.5;
-}
-
-.footer-credits strong {
-  color: #222;
-}
+        .footer-credits strong {
+            color: #00f0ff;
+        }
     </style>
 </head>
-<body class="min-h-screen text-slate-100 flex items-center justify-center p-3 md:p-6">
+<body class="min-h-screen text-slate-100 flex flex-col items-center justify-between p-3 md:p-6">
 
-    <div class="w-full max-w-md space-y-4">
+    <!-- Container Utama Kalkulator -->
+    <div class="w-full max-w-md space-y-4 my-auto">
         
         <!-- Header Mode Selector -->
         <div class="cyber-glass rounded-2xl p-2 flex gap-2 text-xs font-bold font-digital">
@@ -237,7 +212,6 @@
                 <button onclick="inputSci('%')" class="cyber-btn cyber-btn-sci py-2.5 rounded-lg">%</button>
                 <button onclick="inputSci('/')" class="cyber-btn cyber-btn-op py-2.5 rounded-lg">÷</button>
 
-                <!-- Numpad Keypad -->
                 <button onclick="inputSci('7')" class="cyber-btn py-3.5 rounded-xl text-base font-digital">7</button>
                 <button onclick="inputSci('8')" class="cyber-btn py-3.5 rounded-xl text-base font-digital">8</button>
                 <button onclick="inputSci('9')" class="cyber-btn py-3.5 rounded-xl text-base font-digital">9</button>
@@ -264,13 +238,11 @@
 
         <!-- PANEL 2: BIO-HEALTH / BMI CALCULATOR -->
         <div id="panelBio" class="cyber-glass rounded-2xl p-5 space-y-4 hidden">
-            
             <div class="border-b border-slate-700/60 pb-2">
                 <h2 class="text-sm font-bold font-digital text-cyan-400 tracking-wider">🧬 ANALISIS MASA TUBUH &amp; IDEAL</h2>
                 <p class="text-xs text-slate-400">Kalkulator bio-metrik berbasis standar WHO Asia-Pasifik &amp; Broca.</p>
             </div>
 
-            <!-- Input Form -->
             <div class="grid grid-cols-2 gap-3 text-xs">
                 <div>
                     <label class="block font-bold text-slate-300 mb-1">BERAT BADAN (KG)</label>
@@ -286,16 +258,56 @@
                 🔍 JALANKAN DIAGNOSA BIO-HEALTH
             </button>
 
-            <!-- Output Result Card -->
-            <div id="bioResult" class="space-y-3 pt-2">
-                <!-- Result dynamically rendered -->
-            </div>
-
+            <div id="bioResult" class="space-y-3 pt-2"></div>
         </div>
 
     </div>
+
+    <!-- Footer Container -->
+    <footer class="social-footer-container">
+        <!-- Row 1: Icon Social Media -->
+        <div class="social-footer-bar">
+            <a href="https://www.linkedin.com/in/yudi-dwiranto-cs77" target="_blank" rel="noopener noreferrer" class="social-icon linkedin" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+                <span class="tooltip">LinkedIn</span>
+            </a>
+            
+            <a href="https://web.facebook.com/ydwiranto" target="_blank" rel="noopener noreferrer" class="social-icon facebook" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+                <span class="tooltip">Facebook</span>
+            </a>
+            
+            <a href="https://www.instagram.com/yudi_cah_sragen_77/" target="_blank" rel="noopener noreferrer" class="social-icon instagram" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+                <span class="tooltip">Instagram</span>
+            </a>
+            
+            <a href="https://wa.me/6281389188903?text=Assalamu.alaikum...%20Halo!%20Selamat%20[Pagi,%20Siang,%20Sore]%20Saya%20baru%20saja%20melihat%20web%20aplikasi%20Anda%20dan%20tertarik%20dengan%20solusinya.%20Kalau%20ada%20waktu%20luang,%20boleh%20kita%20mengobrol%20santai%20dulu%20untuk%20melihat%20potensi%20kerja%20sama%20ke%20depan%20?%20Terima%20kasih" target="_blank" rel="noopener noreferrer" class="social-icon whatsapp" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+                <span class="tooltip">WhatsApp</span>
+            </a>
+            
+            <a href="https://id.shp.ee/yudmwbm1?fromSource=whatsapp&smtt=0.0.3" target="_blank" rel="noopener noreferrer" class="social-icon shopee" aria-label="Shopee">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="tooltip">Shopee</span>
+            </a>
+            
+            <a href="https://www.tiktok.com/@selarasdirumah" target="_blank" rel="noopener noreferrer" class="social-icon tiktok" aria-label="TikTok">
+                <i class="fab fa-tiktok"></i>
+                <span class="tooltip">TikTok</span>
+            </a>
+        </div>
+
+        <!-- Kolaborator & Hak Cipta -->
+        <div class="footer-credits">
+            Handcrafted with ❤️ by <strong>Andrew Dwiranto</strong> (Cah_Sragen_77, Indonesia)
+            <div class="mt-1">
+                © 2026 Hak Cipta Dilindungi Undang-Undang
+            </div>
+        </div>
+    </footer>
+
     <script>
-        // --- TAB SWITCHER ---
         function switchTab(tab) {
             const sciPanel = document.getElementById('panelSci');
             const bioPanel = document.getElementById('panelBio');
@@ -312,11 +324,10 @@
                 bioPanel.classList.remove('hidden');
                 btnBio.className = "flex-1 py-2 rounded-xl transition bg-pink-500/20 text-pink-400 border border-pink-500/40 shadow-[0_0_10px_rgba(255,0,128,0.2)]";
                 btnSci.className = "flex-1 py-2 rounded-xl transition text-slate-400 hover:text-cyan-300";
-                calculateBio(); // Auto run on switch
+                calculateBio();
             }
         }
 
-        // --- SCIENTIFIC CALCULATOR LOGIC ---
         let sciExpression = "";
         let isDegree = true;
 
@@ -359,7 +370,6 @@
                     .replace(/log\(/g, 'Math.log10(')
                     .replace(/ln\(/g, 'Math.log(');
 
-                // Handle Trigonometry DEG vs RAD
                 if (isDegree) {
                     expr = expr.replace(/sin\((.*?)\)/g, (m, g1) => `Math.sin((${g1}) * Math.PI / 180)`);
                     expr = expr.replace(/cos\((.*?)\)/g, (m, g1) => `Math.cos((${g1}) * Math.PI / 180)`);
@@ -372,7 +382,6 @@
 
                 let result = eval(expr);
                 if (typeof result === 'number' && !isNaN(result)) {
-                    // Format precision
                     result = Number(result.toFixed(8));
                     display.innerText = result;
                     sciExpression = String(result);
@@ -384,7 +393,6 @@
             }
         }
 
-        // --- BIO-HEALTH (BMI) LOGIC ---
         function calculateBio() {
             const weight = parseFloat(document.getElementById('bioWeight').value) || 0;
             const height = parseFloat(document.getElementById('bioHeight').value) || 0;
@@ -397,20 +405,10 @@
 
             const heightM = height / 100;
             const bmi = weight / (heightM * heightM);
-
-            // Broca Ideal Weight formula
-            let idealWeight = 0;
-            if (height < 160) {
-                idealWeight = (height - 100) - ((height - 100) * 0.10);
-            } else {
-                idealWeight = (height - 100) - ((height - 100) * 0.10);
-            }
-
-            // Ideal BMI Range (18.5 - 22.9)
+            const idealWeight = (height - 100) - ((height - 100) * 0.10);
             const minIdealWeight = 18.5 * (heightM * heightM);
             const maxIdealWeight = 22.9 * (heightM * heightM);
 
-            // Category determination (WHO Asia-Pacific)
             let status = "";
             let statusColor = "";
             let badgeBg = "";
@@ -445,7 +443,7 @@
                 </div>
 
                 <div class="p-4 bg-slate-950/80 border border-cyan-500/20 rounded-xl space-y-2 text-xs">
-                    <div class="font-bold text-cyan-400 font-digital border-b border-slate-800 pb-1">🎯 ANISA &amp; TARGET BERAT IDEAL</div>
+                    <div class="font-bold text-cyan-400 font-digital border-b border-slate-800 pb-1">🎯 TARGET BERAT IDEAL</div>
                     <div class="flex justify-between text-slate-300">
                         <span>Target Ideal (Rumus Broca):</span>
                         <strong class="text-cyan-300 font-digital">${idealWeight.toFixed(1)} kg</strong>
@@ -464,54 +462,5 @@
             `;
         }
     </script>
-
-    <!-- Footer Container -->
-<footer class="social-footer-container">
-  
-  <!-- Row 1: Icon Social Media (Tiduran / Horizontal) -->
-  <div class="social-footer-bar">
-    <a href="https://www.linkedin.com/in/yudi-dwiranto-cs77" target="_blank" rel="noopener noreferrer" class="social-icon linkedin" aria-label="LinkedIn">
-      <i class="fab fa-linkedin-in"></i>
-      <span class="tooltip">LinkedIn</span>
-    </a>
-    
-    <a href="https://web.facebook.com/ydwiranto" target="_blank" rel="noopener noreferrer" class="social-icon facebook" aria-label="Facebook">
-      <i class="fab fa-facebook-f"></i>
-      <span class="tooltip">Facebook</span>
-    </a>
-    
-    <a href="https://www.instagram.com/yudi_cah_sragen_77/" target="_blank" rel="noopener noreferrer" class="social-icon instagram" aria-label="Instagram">
-      <i class="fab fa-instagram"></i>
-      <span class="tooltip">Instagram</span>
-    </a>
-    
-    <a href="https://wa.me/6281389188903?text=Assalamu.alaikum...%20Halo!%20Selamat%20[Pagi,%20Siang,%20Sore]%20Saya%20baru%20saja%20melihat%20web%20aplikasi%20Anda%20dan%20tertarik%20dengan%20solusinya.%20Kalau%20ada%20waktu%20luang,%20boleh%20kita%20mengobrol%20santai%20dulu%20untuk%20melihat%20potensi%20kerja%20sama%20ke%20depan%20?%20Terima%20kasih" target="_blank" rel="noopener noreferrer" class="social-icon whatsapp" aria-label="WhatsApp">
-      <i class="fab fa-whatsapp"></i>
-      <span class="tooltip">WhatsApp</span>
-    </a>
-    
-    <a href="https://id.shp.ee/yudmwbm1?fromSource=whatsapp&smtt=0.0.3" target="_blank" rel="noopener noreferrer" class="social-icon shopee" aria-label="Shopee">
-      <i class="fas fa-shopping-bag"></i>
-      <span class="tooltip">Shopee</span>
-    </a>
-    
-    <a href="https://www.tiktok.com/@selarasdirumah" target="_blank" rel="noopener noreferrer" class="social-icon tiktok" aria-label="TikTok">
-      <i class="fab fa-tiktok"></i>
-      <span class="tooltip">TikTok</span>
-    </a>
-  </div>
- <!-- Kolaborator & Hak Cipta -->
-  <div class="footer-credits">
-    Handcrafted with ❤️ by <strong>Andrew Dwiranto</strong> (Cah_Sragen_77, Indonesia)
-          
-  <div class="mt-1.5">
-    © 2026 Hak Cipta Dilindungi Undang-Undang
-  </div>
-</div>
-    
-
-    
-
-</footer>
 </body>
 </html>
